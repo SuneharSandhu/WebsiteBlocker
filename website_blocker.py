@@ -10,11 +10,11 @@ host_path = '/etc/hosts'
 # host_path = r"C:\Windows\System32\drivers\etc\hosts"
 
 redirect = '127.0.0.1'
-website_list = ['https://www4.gogoanime.io', 'gogoanime.io']
+website_list = ['youtube.com', 'facebook.com']
 
 while True:
 
-    # datetime(year, month, day, hour, minute, second, microsecond)
+    # datetime(year, month, day, hour, minute, second, microsecond) 
 
     year = dt.now().year
     month = dt.now().month
@@ -36,7 +36,7 @@ while True:
     # working hours
     else:
         with open(host_path, 'r+') as file:
-            content = file.readlines()          # stores content in a list
+            content = file.readlines()         # stores content in a list
             file.seek(0)
             for line in content:
                 if not any(website in line for website in website_list):
